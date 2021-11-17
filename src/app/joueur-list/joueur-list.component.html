@@ -1,0 +1,61 @@
+ <br>
+<div class="row" *ngIf="joueurs.length>0">
+  <div class="container">
+    <div class="card">
+      <div class="card-header">Liste des joueurs</div>
+      <div class="card-body">
+        <table class="table">
+          <thead class="thead-light">
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Jeu</th>
+            <th>Poids</th>
+            <th>Taille</th>
+            <th>Equipe</th>
+          </thead>
+          <tr *ngFor="let item of joueurs;let i=index">
+            <td>{{item.id}}</td>
+            <td>{{item.nom}}</td>
+            <td>{{item.prenom}}</td>
+            <td>{{item.jeu}}</td>
+            <td>{{item.poids}}</td>
+            <td>{{item.taille}}</td>
+            <td>{{item.equipe.nom_equipe}}</td>
+ 
+            <td><input type="submit" value="Edit" class="btn btn-warning" (click)="edit(item.id)"/></td>
+            <td><input type="submit" value="Delete" class="btn btn-danger" (click)="delete(item.id,i)"/></td>
+          </tr>
+
+
+
+
+
+
+
+        </table>
+
+
+
+
+
+
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+
+
+</div>

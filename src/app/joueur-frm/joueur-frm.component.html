@@ -1,0 +1,135 @@
+ 
+
+<br>
+<div class="row">
+  <div class="container">
+   <form [formGroup]="form" >
+     <div class="card">
+       <div class="card-header">Formulaire joueur</div>
+       <div class="card-body">
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="id">Id</label>
+            <input type="text" class="form-control" formControlName="id"/>
+            <p *ngIf="form.get('id').invalid && form.get('id').touched" style="color:red">Id is required</p>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="nom">Nom</label>
+            <input type="text" class="form-control" formControlName="nom"/>
+            <div *ngIf="form.get('nom').invalid && form.get('nom').touched">
+              <p *ngIf="form.get('nom').errors.required" style="color:red">nom is required</p>
+              <p *ngIf="form.get('nom').errors.minlength" style="color:red">nom doit avoir une taille minimal de 5 caractères</p>
+              <p *ngIf="form.get('nom').errors.maxlength" style="color:red">nom doit avoir une taille maximal de 20 caractères</p>
+            </div>
+            
+            
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group col-md-6">
+            <label for="prenom">Prenom</label>
+            <input type="text" class="form-control" formControlName="prenom"/>
+            <div *ngIf="form.get('prenom').invalid && form.get('prenom').touched">
+              <p *ngIf="form.get('prenom').errors.required" style="color:red">prenom is required</p>
+              <p *ngIf="form.get('prenom').errors.minlength" style="color:red">prenom doit avoir une taille minimale de 5 caractères</p>
+              <p *ngIf="form.get('prenom').errors.maxlength" style="color:red">prenom doit avoir une taille maximale de 20 caractères</p>
+            </div>
+          </div>
+
+        
+
+        
+            <div class="form-group col-md-6">
+              <label for="jeu">jeu</label>
+              <input type="text" class="form-control" formControlName="jeu"/>
+              <div *ngIf="form.get('jeu').invalid && form.get('jeu').touched">
+                <p *ngIf="form.get('jeu').errors.required" style="color:red">jeu is required</p>
+                <p *ngIf="form.get('jeu').errors.minlength" style="color:red">jeu doit avoir une taille minimale de 5 caractères</p>
+                <p *ngIf="form.get('jeu').errors.maxlength" style="color:red">jeu doit avoir une taille maximale de 20 caractères</p>
+              </div>
+            </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="poids">poids</label>
+                  <input type="text" class="form-control" formControlName="poids"/>
+                  <div *ngIf="form.get('poids').invalid && form.get('poids').touched">
+                    <p *ngIf="form.get('poids').errors.required" style="color:red">poids is required</p>
+                    <p *ngIf="form.get('poids').errors.minlength" style="color:red">poids doit avoir une taille minimale de 5 caractères</p>
+                    <p *ngIf="form.get('poids').errors.maxlength" style="color:red">poids doit avoir une taille maximale de 20 caractères</p>
+                  </div>
+                </div>
+       
+                
+                    <div class="form-group col-md-6">
+                      <label for="taille">taille</label>
+                      <input type="text" class="form-control" formControlName="taille"/>
+                      <div *ngIf="form.get('taille').invalid && form.get('taille').touched">
+                        <p *ngIf="form.get('taille').errors.required" style="color:red">taille is required</p>
+                        <p *ngIf="form.get('taille').errors.minlength" style="color:red">taille doit avoir une taille minimale de 5 caractères</p>
+                        <p *ngIf="form.get('taille').errors.maxlength" style="color:red">taille doit avoir une taille maximale de 20 caractères</p>
+                      </div>
+                    </div>
+
+
+            </div>
+            <div class="row">
+            <div class="form-group col-md-6">
+              <label for="equipe">Equipe</label>
+              <select class="form-control" formControlName="equipe">
+                <option *ngFor="let equipe of equipes" [ngValue]="equipe">{{equipe.nom_equipe}}</option>
+              </select>
+            </div>  
+            </div>
+            <div class="row">
+        
+          <div class="form-group col-md-6">
+            
+            <input type="submit" class="btn btn-primary" value="save" *ngIf="!mode" [disabled]="!form.valid" (click)="save()"/>
+            <input type="submit" class="btn btn-primary" value="update" *ngIf="mode" [disabled]="!form.valid" (click)="update()"/>
+          </div>
+          
+        </div>
+
+
+
+
+
+
+
+       </div>
+
+
+
+
+
+
+     </div>
+
+
+
+
+     
+
+
+
+
+
+
+
+
+    </form>
+
+
+
+
+
+  </div>
+
+
+
+
+
+</div>

@@ -1,0 +1,44 @@
+<br>
+<!-- <div class="case_study_area case_page"></div> -->
+<div class="row" *ngIf="equipes.length>0">
+  <div class="container">
+    <div class="card">
+      <div class="card-header">Liste d'equipe</div>
+      <div class="card-body">
+        <table class="table">
+          <thead class="thead-light">
+            <th>id</th>
+            <th>nom_equipe</th>
+            <th>nombre_joueur</th>
+          
+        </thead>
+        <tr *ngFor="let item of equipes;let i=index">
+            <td>{{item.id}}</td>
+            <td>{{item.nom_equipe}}</td>
+            <td>{{item.nombre_joueur}}</td>
+            <td><input type="submit" value="Edit" class="btn btn-warning" (click)="edit(item.id)"/>  
+             <input type="submit" value="Delete" class="btn btn-danger" (click)="delete(item.id,i)"/></td>
+          </tr>
+
+        </table>
+          
+      </div>
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+  </div>
+
+
+ 
+
+</div>
+ 
