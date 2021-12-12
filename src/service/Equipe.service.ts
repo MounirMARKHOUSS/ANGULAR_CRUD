@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 export class EquipeService {
     equipes: any[] = [];
     editMode = false;
-    URL = 'http://localhost:8096//apiEquipes';
+    URL = 'http://localhost:8086//apiEquipes';
 
 
     constructor(private http: HttpClient) {

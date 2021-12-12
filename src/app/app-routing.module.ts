@@ -8,8 +8,9 @@ import { Joueur1Component } from './joueur1/joueur1.component';
 import { JoueurFrmComponent } from './joueur-frm/joueur-frm.component';
  
 const routes: Routes = [
-  { path: '', redirectTo: '/joueur', pathMatch: 'full' },
-  { path: '', redirectTo: '/equipe', pathMatch: 'full' },
+  // { path: '', redirectTo: '/joueur', pathMatch: 'full' },
+  // { path: '', redirectTo: '/equipe', pathMatch: 'full' },
+  {path:'' , redirectTo:'/navbar', pathMatch:'full'},
    {
     path: 'joueur', component: Joueur1Component, children: [
       { path: 'form', component: JoueurFrmComponent },

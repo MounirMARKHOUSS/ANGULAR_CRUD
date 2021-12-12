@@ -13,6 +13,7 @@ import { JoueurFrmComponent } from './joueur-frm/joueur-frm.component';
 import { EquipeComponent } from './equipe/equipe.component';
 import { EquipeFrmComponent } from './equipe-frm/equipe-frm.component';
 import { EquipeListComponent } from './equipe-list/equipe-list.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { EquipeListComponent } from './equipe-list/equipe-list.component';
     Joueur1Component,
     EquipeComponent,
     EquipeFrmComponent,
-    EquipeListComponent
+    EquipeListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
